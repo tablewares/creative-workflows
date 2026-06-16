@@ -1,0 +1,8 @@
+[
+  {
+    "name": "connect.sid",
+    "value": "s%3AWCI8TLxdB7SXdNl2iWv-v3XYAj3Sm6Tw.b%2FL1xpHBKrxHxyaDiXdBDNZQNHsZSkqTQMQPgvqus4U",
+    "domain": "localhost.local",
+    "path": "/"
+  }
+]

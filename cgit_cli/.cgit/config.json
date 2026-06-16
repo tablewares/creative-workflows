@@ -1,0 +1,5 @@
+{
+  "api_url": "http://localhost:3000",
+  "cookie_file": "cookies.txt",
+  "current_user": "tester_bob"
+}
