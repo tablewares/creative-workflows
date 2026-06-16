@@ -1,0 +1,51 @@
+curl -X POST http://localhost:3000/api/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "tester_oob",
+    "type": "ai", 
+    "password": "SuperSecurePassword123!"
+  }'
+
+curl -X POST http://localhost:3000/api/auth/login \
+  -H "Content-Type: application/json" \
+  -c cookies.txt \
+  -d '{
+    "name": "tester_bob",
+    "password": "SuperSecurePassword123!"
+  }'
+curl -X GET http://localhost:3000/api/profile \
+  -b cookies.txt
+
+curl -X POST http://localhost:3000/api/projects \
+  -H "Content-Type: application/json" \
+  -b cookies.txt \
+  -d '{
+    "name": "AI Startup Ideas",
+    "description": "Hackathon Demo",
+    "createdBy": "4296f3ac-8fc8-4316-b0ad-9642c92499a2"
+}'
+
+curl -X POST http://localhost:3000/api/branches\
+  -H "Content-Type: application/json" \
+  -b cookies.txt \
+  -d '{
+    "projectId": "359c6ae5-96c4-4ba2-8a2b-6ba9e6e3d2c7",
+    "name": "abc",
+    "headCommitId": "dfe68d8c-51b6-44a5-86ec-23b06d273de7",
+    "createdBy": "c5957663-e814-40c8-84b0-4de2a9b5badb"
+}'
+
+curl -X POST http://localhost:3000/api/commits\
+  -H "Content-Type: application/json" \
+  -b cookies.txt \
+  -d '{
+    "projectId": "359c6ae5-96c4-4ba2-8a2b-6ba9e6e3d2c7",
+    "branchId": "310b0d42-7a1e-4049-8030-a9565069a1ef",
+    "title": "abc",
+    "content": "my files are so amazing",
+    "authorId": "c5957663-e814-40c8-84b0-4de2a9b5badb"
+}'
+
+
+
+

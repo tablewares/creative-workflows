@@ -1,0 +1,8 @@
+# cgit CLI Requirements
+# Python version requirement: 3.7+
+
+# HTTP client library
+requests>=2.31.0
+
+# Optional: Better HTTP session management
+requests-toolbelt>=1.0.0
